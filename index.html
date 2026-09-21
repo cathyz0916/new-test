@@ -894,7 +894,7 @@ html{font-size:14px}body{font-family:var(--font);background:var(--bg-alt);color:
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
     <span id="gh-status-indicator" style="display:inline-flex;align-items:center;gap:4px">
       <span class="gh-dot syncing" id="gh-dot"></span>
-      <span id="gh-label" title="Connected to cathyz0916/new-test (main)">GitHub: Connected</span>
+      <span id="gh-label">GitHub Sync</span>
     </span>
   </button>
   <button class="gist-btn" onclick="openGistModal()" title="Sync data via GitHub Gist — zero-step live updates for everyone">
@@ -4989,7 +4989,7 @@ function _showEmailToast(regionCount,asEml){
         Automatically replicate to GitHub immediately upon uploading Excel file
       </label>
     </div>
-    <div id="gh-test-result" style="font-size: 12px; padding: 6px 0px; display: none; color: rgb(187, 0, 0);"></div>
+    <div id="gh-test-result" style="font-size:12px;padding:6px 0;display:none"></div>
     <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px">
       <button class="em-hdr-btn" onclick="testGitHubConnection()" id="btn-gh-test" style="height:34px;padding:0 14px">Test Connection</button>
       <button class="em-hdr-btn save-btn" onclick="saveGitHubSettings()" style="height:34px;padding:0 18px">Save Settings</button>
@@ -5015,7 +5015,7 @@ function _showEmailToast(regionCount,asEml){
           <li><strong>Dynamic Baseline:</strong> 381 accounts</li>
         </ul>
       </div>
-    <div id="upload-sync-status" style="background:var(--bg-alt);border:1px solid var(--bdr);border-radius:6px;padding:12px;font-size:12px;color:var(--sub);line-height:1.5"><strong>Automatic GitHub Sync not yet configured.</strong> Click <em>Set up GitHub</em> to connect your repo in 30 seconds so all future uploads replicate automatically!</div>
+    <div id="upload-sync-status" style="background:var(--bg-alt);border:1px solid var(--bdr);border-radius:6px;padding:12px;font-size:12px;color:var(--sub);line-height:1.5"><strong>⚡ Automatic GitHub Replication:</strong> Replicating now to <code>cathyz0916/new-test</code> (main)...</div>
     <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px">
       <button class="em-hdr-btn" onclick="closeUploadModal()" style="height:34px;padding:0 14px">Close</button>
       <button class="em-hdr-btn" onclick="_rebuildAndDownload();closeUploadModal()" style="height:34px;padding:0 14px" title="Download standalone index.html as local backup">
