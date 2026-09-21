@@ -886,14 +886,14 @@ html{font-size:14px}body{font-family:var(--font);background:var(--bg-alt);color:
     <span>Upload New File</span>
     <input type="file" id="excel-file-input" accept=".xlsx,.xls" style="display:none" onchange="handleFileUpload(event)">
   </label>
-  <button class="em-hdr-btn save-btn syncing" id="hdr-save-btn" onclick="handleSaveAndSync()" title="Save &amp; replicate automatically to GitHub">
+  <button class="em-hdr-btn save-btn" id="hdr-save-btn" onclick="handleSaveAndSync()" title="Save &amp; replicate automatically to GitHub">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
-    <span id="save-btn-text">Replicating to GitHub...</span>
+    <span id="save-btn-text">Sync Failed</span>
   </button>
   <button class="em-hdr-btn gh-cfg-btn" onclick="openGitHubModal()" title="Configure GitHub Auto-Sync (Repo, Branch, Token)">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
     <span id="gh-status-indicator" style="display:inline-flex;align-items:center;gap:4px">
-      <span class="gh-dot syncing" id="gh-dot"></span>
+      <span class="gh-dot err" id="gh-dot"></span>
       <span id="gh-label">GitHub Sync</span>
     </span>
   </button>
@@ -5027,4 +5027,6 @@ function _showEmailToast(regionCount,asEml){
     </div>
   </div>
 </div>
-<div id="sync-toast-el" class="sync-toast" style="display: block; opacity: 1;">🔄 Replicating changes directly to GitHub (cathyz0916/new-test)...</div></body></html>
+<div id="sync-toast-el" class="sync-toast" style="display: block; opacity: 1;">🚀 <strong>Successfully replicated to GitHub!</strong><br>
+      Committed to <code>cathyz0916/new-test</code> on branch <code>main</code> (<a href="https://github.com/cathyz0916/new-test/commit/a283efd413908fbcd423916afc8a9a1fe90de233" target="_blank" style="color:#4CB1FF;text-decoration:underline">a283efd</a>).<br>
+      GitHub Pages will deploy within ~30-60 seconds and all viewers will see the new content!</div></body></html>
